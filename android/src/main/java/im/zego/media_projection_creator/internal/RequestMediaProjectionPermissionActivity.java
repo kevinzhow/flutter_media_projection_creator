@@ -69,6 +69,7 @@ public class RequestMediaProjectionPermissionActivity extends Activity {
 
             if (resultCode == RESULT_OK) {
                 data.putExtra("resultCode", resultCode);
+                data.setPackage(getPackageName());
                 data.setAction("com.media_projection_creator.request_permission_result_succeeded");
                 sendBroadcast(data);
             } else {
